@@ -24,5 +24,7 @@ int main(int argc, char** argv)
     obb_corres.read_boxes_xml(argv[1], argv[2]);
     obb_corres.compute_fuzzy_correspond();
     std::cout<<obb_corres.fuzzy_corres<<std::endl;
+    obb_corres.save_result_xml(0.6);
+    //obb_corres.reset_result_xml();
     return 0;
 }
